@@ -1,6 +1,6 @@
-import {POSITION, TYPE, useToast} from "vue-toastification";
+import {POSITION, useToast} from "vue-toastification";
 import GeneralToast from "../common/components/Toasts/GeneralToast.vue";
-import {CommonOptions, ToastOptions} from "vue-toastification/dist/types/types";
+import {CommonOptions} from "vue-toastification/dist/types/types";
 import {ToastMessage} from "../common/types/utils";
 
 
