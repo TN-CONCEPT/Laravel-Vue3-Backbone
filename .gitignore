@@ -1,0 +1,25 @@
+# Environment specific folders
+/.idea
+/.vscode
+
+# Package related folders
+/node_modules
+/vendor
+
+# File upload and asset files related
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+
+# env file
+.env
+.env.backup
+
+# Logs and cache
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log

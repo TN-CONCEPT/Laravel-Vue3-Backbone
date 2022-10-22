@@ -1,0 +1,94 @@
+@layer components {
+    .title {
+        @apply tw-font-hammersmith-one tw-font-normal;
+    }
+
+    .subtitle {
+        @apply tw-font-hammersmith-one tw-font-normal;
+        @apply tw-text-accent-3-700;
+    }
+
+    h1 {
+        @apply title tw-text-5xl tw-text-dark-blue;
+    }
+
+    h2 {
+        @apply title tw-text-2xl tw-text-dark-blue;
+    }
+
+
+    .container {
+        width: 100%;
+        padding-right: 0.75rem;
+        padding-left: 0.75rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media (min-width: 640px) {
+        .container {
+            max-width: 540px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            max-width: 720px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .container {
+            max-width: 960px;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .container {
+            max-width: 1140px;
+        }
+    }
+
+    @media (min-width: 1536px) {
+        .container {
+            max-width: 1320px;
+        }
+    }
+
+    body {
+        @apply tw-bg-default-gray;
+    }
+
+    .dark-text {
+        color: #3E4775;
+    }
+
+    .dark-text-hover {
+        color: #515983;
+    }
+
+    .inactive-text {
+        @apply tw-text-accent-3-100;
+    }
+
+    .light-text {
+        @apply tw-text-white;
+    }
+
+    .light-text-hover {
+        @apply tw-text-gray-300;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
+
+body {
+    @apply tw-overflow-x-hidden;
+}
