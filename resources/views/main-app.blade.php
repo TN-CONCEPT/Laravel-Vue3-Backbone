@@ -1,6 +1,6 @@
 @extends('layout')
 @section('vue-resources')
-    @vite('resources/css/app.css')
+    @vite('resources/css/app.scss')
 @endsection
 
 @section('vue-content')
@@ -8,5 +8,5 @@
 @endsection
 
 @section('vue-js')
-    @vite('resources/js/app.js')
+    @vite('resources/js/app.ts')
 @endsection

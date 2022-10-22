@@ -1,5 +1,5 @@
 import * as VueRouter from 'vue-router';
-import {websiteRoutes} from "./WebsiteRoutes";
+import {websiteRoutes} from "./websiteRoutes";
 
 const router = VueRouter.createRouter({
     history: VueRouter.createWebHistory(),
