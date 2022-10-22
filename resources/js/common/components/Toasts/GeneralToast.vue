@@ -11,13 +11,13 @@ export default {
     props: {
         title: {
             type: String,
-            required: true
+            required: true,
         },
         subtitle: {
             type: String,
             required: false,
-            default: undefined
-        }
-    }
+            default: undefined,
+        },
+    },
 }
 </script>

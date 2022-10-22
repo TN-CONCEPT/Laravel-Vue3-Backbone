@@ -1,4 +1,4 @@
-const apiRoot: string = '/api'
+const apiRoot = "/api"
 
 export const Urls = {
     users: `${apiRoot}/users`,
@@ -11,5 +11,5 @@ export const Responses = {
     UNAUTHORIZED: 401,
     NOT_FOUND: 404,
     SERVER_ERROR: 500,
-    BAD_REQUEST: 422
+    BAD_REQUEST: 422,
 }

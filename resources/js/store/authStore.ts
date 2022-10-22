@@ -1,10 +1,10 @@
-import {defineStore} from 'pinia'
-import {User} from '../common/types/userTypes'
+import { defineStore } from "pinia"
+import { User } from "../common/types/userTypes"
 
 export const useAuthStore = defineStore({
-    id: 'auth',
+    id: "auth",
     state: () => ({
         user: null as User | null,
         afterSuccessfulSignup: false as boolean,
-    })
+    }),
 })

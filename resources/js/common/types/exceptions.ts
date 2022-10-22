@@ -1,13 +1,11 @@
 class IException {
-    protected message: string | null | undefined;
+    protected message: string | null | undefined
 
-    constructor() {
-
-    }
+    constructor() {}
 }
 
-class UnauthorizedException extends IException{}
-class UnauthenticatedException extends IException{}
-class ServerErrorException extends IException{}
+class UnauthorizedException extends IException {}
+class UnauthenticatedException extends IException {}
+class ServerErrorException extends IException {}
 
-export {UnauthorizedException, UnauthenticatedException, ServerErrorException}
+export { UnauthorizedException, UnauthenticatedException, ServerErrorException }

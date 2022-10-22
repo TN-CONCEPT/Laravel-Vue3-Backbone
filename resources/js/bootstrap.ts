@@ -1,8 +1,8 @@
-import _ from 'lodash';
-import axios, {AxiosRequestConfig, AxiosRequestHeaders} from 'axios';
-import {useAuthStore} from "./store/authStore";
+import _ from "lodash"
+import axios, { AxiosRequestConfig, AxiosRequestHeaders } from "axios"
+import { useAuthStore } from "./store/authStore"
 
-window._ = _;
+window._ = _
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -13,29 +13,29 @@ window._ = _;
 /**
  * Global request axios configurations
  */
-axios.defaults.withCredentials = true;
-axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-axios.defaults.headers.common['Accept'] = 'application/json';
-axios.defaults.headers.common['X-CSRF-TOKEN'] = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') ?? '';
-axios.interceptors.response.use(undefined, error => {
-    return Promise.reject(error); // <- important piece
-});
+axios.defaults.withCredentials = true
+axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest"
+axios.defaults.headers.common["Accept"] = "application/json"
+axios.defaults.headers.common["X-CSRF-TOKEN"] = document.querySelector('meta[name="csrf-token"]')?.getAttribute("content") ?? ""
+axios.interceptors.response.use(undefined, (error) => {
+    return Promise.reject(error) // <- important piece
+})
 
 /**
  * Automatically append the authorization token if the user is logged in
  */
 axios.interceptors.request.use((config: AxiosRequestConfig) => {
-    const authStore = useAuthStore();
+    const authStore = useAuthStore()
 
-    let user = authStore.user;
+    const user = authStore.user
 
     if (user) {
-        let headers: AxiosRequestHeaders | undefined = config.headers;
+        const headers: AxiosRequestHeaders | undefined = config.headers
 
-        if(headers) {
-            headers.Authorization = `Bearer ${user.token}`;
+        if (headers) {
+            headers.Authorization = `Bearer ${user.token}`
         }
     }
 
-    return config;
-});
+    return config
+})

@@ -1,14 +1,14 @@
 type User = {
-    id: number,
-    username: string,
-    email: string,
-    token: string,
-    roles: [string],
+    id: number
+    username: string
+    email: string
+    token: string
+    roles: [string]
 }
 
 type UserCredentials = {
-    email: string,
+    email: string
     password: string
-};
+}
 
-export type {User, UserCredentials};
+export type { User, UserCredentials }

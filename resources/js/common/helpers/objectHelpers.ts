@@ -1,22 +1,22 @@
-import {camelCaseToSnakeCase, snakeCaseToCamelCase} from "./stringHelpers";
-import {IObject} from "../types/utils";
+import { camelCaseToSnakeCase, snakeCaseToCamelCase } from "./stringHelpers"
+import { IObject } from "../types/utils"
 
 export function convertKeysToSnakeCase(object: IObject) {
-    let newObject: IObject = {};
+    const newObject: IObject = {}
 
     for (const key in object) {
-        newObject[camelCaseToSnakeCase(key)] = object[key];
+        newObject[camelCaseToSnakeCase(key)] = object[key]
     }
 
-    return newObject;
+    return newObject
 }
 
 export function convertKeysToCamelCase(object: IObject) {
-    let newObject: IObject = {};
+    const newObject: IObject = {}
 
     for (const key in object) {
-        newObject[snakeCaseToCamelCase(key)] = object[key];
+        newObject[snakeCaseToCamelCase(key)] = object[key]
     }
 
-    return newObject;
+    return newObject
 }

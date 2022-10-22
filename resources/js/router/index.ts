@@ -1,5 +1,5 @@
-import * as VueRouter from 'vue-router';
-import {websiteRoutes} from "./websiteRoutes";
+import * as VueRouter from "vue-router"
+import { websiteRoutes } from "./websiteRoutes"
 
 const router = VueRouter.createRouter({
     history: VueRouter.createWebHistory(),
@@ -8,18 +8,18 @@ const router = VueRouter.createRouter({
         if (savedPosition) {
             return savedPosition
         } else if (to.hash) {
-            return new Promise((resolve, reject) => {
+            return new Promise((resolve) => {
                 setTimeout(() => {
                     resolve({
                         el: to.hash,
-                        behavior: 'smooth',
+                        behavior: "smooth",
                     })
-                }, 500);
-            });
+                }, 500)
+            })
         } else {
-            return {top: 0};
+            return { top: 0 }
         }
     },
-});
+})
 
 export default router

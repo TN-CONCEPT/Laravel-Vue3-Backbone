@@ -1,10 +1,9 @@
-import {POSITION, useToast} from "vue-toastification";
-import GeneralToast from "../common/components/Toasts/GeneralToast.vue";
-import {CommonOptions} from "vue-toastification/dist/types/types";
-import {ToastMessage} from "../common/types/utils";
+import { POSITION, useToast } from "vue-toastification"
+import GeneralToast from "../common/components/Toasts/GeneralToast.vue"
+import { CommonOptions } from "vue-toastification/dist/types/types"
+import { ToastMessage } from "../common/types/utils"
 
-
-const toast = useToast();
+const toast = useToast()
 
 const config: CommonOptions = {
     position: POSITION.TOP_RIGHT,
@@ -18,41 +17,41 @@ const config: CommonOptions = {
     hideProgressBar: false,
     closeButton: "button",
     icon: true,
-    rtl: false
-};
+    rtl: false,
+}
 
-let toastComponent = {
+const toastComponent = {
     component: GeneralToast,
     props: {
-        title: '',
-        subtitle: ''
+        title: "",
+        subtitle: "",
     },
 }
 
 export default {
     default(message: ToastMessage) {
-        toastComponent.props = message;
+        toastComponent.props = message
 
-        toast(toastComponent, config);
+        toast(toastComponent, config)
     },
     success(message: ToastMessage) {
-        toastComponent.props = message;
+        toastComponent.props = message
 
-        toast.success(toastComponent, config);
+        toast.success(toastComponent, config)
     },
     info(message: ToastMessage) {
-        toastComponent.props = message;
+        toastComponent.props = message
 
-        toast.info(toastComponent, config);
+        toast.info(toastComponent, config)
     },
     warning(message: ToastMessage) {
-        toastComponent.props = message;
+        toastComponent.props = message
 
-        toast.warning(toastComponent, config);
+        toast.warning(toastComponent, config)
     },
     error(message: ToastMessage) {
-        toastComponent.props = message;
+        toastComponent.props = message
 
-        toast.error(toastComponent, config);
-    }
+        toast.error(toastComponent, config)
+    },
 }
