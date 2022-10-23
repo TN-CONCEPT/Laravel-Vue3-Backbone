@@ -13,3 +13,8 @@ export const Responses = {
     SERVER_ERROR: 500,
     BAD_REQUEST: 422,
 }
+
+export const Pages = {
+    HOME: "home-page",
+    NOT_FOUND: "not-found",
+}

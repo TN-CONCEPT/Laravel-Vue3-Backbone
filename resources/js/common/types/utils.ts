@@ -7,4 +7,9 @@ interface IObject {
     [key: string]: any
 }
 
-export type { ToastMessage, IObject }
+type SeoData = {
+    title: string
+    description: string
+}
+
+export type { ToastMessage, IObject, SeoData }
